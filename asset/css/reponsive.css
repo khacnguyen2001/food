@@ -2,8 +2,18 @@
 @media only screen and (min-width:240px) and (max-width:607px) {
 
     /* modal */
+    .modal {
+        left       : 5%;
+        width      : 90%;
+        padding-top: 100px;
+    }
+
     .modal-content {
         width: 100%;
+    }
+
+    .cart-quantity-input {
+        margin-right: 7px;
     }
 
     .cart-item-title {
@@ -27,6 +37,12 @@
 
 /*tablet*/
 @media (min-width:480px) and (max-width:1000px) {
+    .modal {
+        left       : 5%;
+        width      : 90%;
+        padding-top: 100px;
+    }
+
     .cart-quantity-input {
         width: 35px;
     }
