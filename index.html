@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Fast Food</title>
+    <link rel="icon"
+        href="https://png.pngtree.com/png-vector/20190528/ourlarge/pngtree-fast-food-typographical-logo-design-concept-for-label-template-packaging-png-image_1111325.jpg"
+        type="image/x-icon" />
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">FastFood</a>
+            <button id="cart" class="btn btn-primary">
+                <i class="fa fa-cart-shopping"></i>
+                Giỏ Hàng
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa-solid fa-burger"></i></span>
+            </button>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Món Ăn</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+
+                        <div class="cart-items">
+
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Thành Tiền:</strong>
+                            <span class="cart-total-price">0đ</span>
+                        </div>
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse bg-white" id="navbarScroll">
+                <ul class="navbar-nav m-auto my-2 my-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#product">COMBO 1 NGƯỜI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">
+                            COMBO NHÓM
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new">ƯU ĐÃI - MÓN MỚI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#link">KẾT NỐI</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- slice -->
+    <section class="slice">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://kfcvietnam.com.vn/uploads/banner/648ad427307ebc3f2f7f2ac0f8998b6f.png"
+                        class="d-block w-100" alt="...">
+
+                </div>
+                <div class="carousel-item">
+                    <img src="https://kfcvietnam.com.vn/uploads/banner/03a26970b0ac1ffc6705935f05a158f5.png"
+                        class="d-block w-100" alt="...">
+                    >
+                </div>
+                <div class="carousel-item">
+                    <img src="https://kfcvietnam.com.vn/uploads/banner/c3ecd5ad8e685f546e26cb61f23d19fd.png"
+                        class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <!-- component -->
+    <section class="new">
+        <div id="new" class="container py-5">
+            <div class="row py-5">
+                <div class="col-lg-5 m-auto text-center">
+                    <h1>ƯU ĐÃI - MÓN MỚI</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/n1.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">BÁNH TRỨNG SÔ-CÔ-LA HẠNH NHÂN (1 CÁI)</h5>
+                            <p class="card-text">19.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Bánh Trứng Socola Hạnh Nhân</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/n2.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">BÁNH TRỨNG SÔ-CÔ-LA HẠNH NHÂN (4 CÁI)</h5>
+                            <p class="card-text">61.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">4 Bánh Trứng Socola Hạnh Nhân</li>
+
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/n3.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">BỮA TRƯA SIÊU TIẾT KIỆM</h5>
+                            <p class="card-text">40.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Cơm Gà Bít-tết</li>
+                            <li class="list-group-item">1 Súp Rong Biển (1 Phần)</li>
+
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="product">
+        <div id="product" class="container py-5">
+            <div class="row py-5">
+                <div class="col-lg-5 m-auto text-center">
+                    <h1>COMBO 1 NGƯỜI</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/f1.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Gà Rán</h5>
+                            <p class="card-text">63.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">2 Miếng Gà Giòn Cay</li>
+                            <li class="list-group-item">2 Miếng Gà Giòn Không Cay</li>
+                            <li class="list-group-item">1 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/f2.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Gà Quay</h5>
+                            <p class="card-text">75.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Miếng Đùi Gà Quay Giấy Bạc</li>
+                            <li class="list-group-item">1 Cơm Trắng</li>
+                            <li class="list-group-item">1 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/f3.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Mỳ Ý</h5>
+                            <p class="card-text">68.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Mỳ Ý Sốt Cà Gà Viên</li>
+                            <li class="list-group-item">1 Miếng Gà Giòn Cay</li>
+                            <li class="list-group-item">1 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/f4.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Burger</h5>
+                            <p class="card-text">72.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">1 Burger Zinger</li>
+                            <li class="list-group-item">1 Burger Tôm</li>
+                            <li class="list-group-item">1 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <div id="team" class="container py-5">
+            <div class="row py-5">
+                <div class="col-lg-5 m-auto text-center">
+                    <h1>COMBO NHÓM</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/t1.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Nhóm 1</h5>
+                            <p class="card-text">132.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">3 Miếng Gà Giòn Cay</li>
+                            <li class="list-group-item">2 Burger Zinger</li>
+                            <li class="list-group-item">2 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/t2.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Nhóm 2</h5>
+                            <p class="card-text">146.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">4 Miếng Gà Truyền Thống</li>
+                            <li class="list-group-item">2 Thanh Bí Phô-mai</li>
+                            <li class="list-group-item">2 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/t3.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Nhóm 3</h5>
+                            <p class="card-text">175.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">5 Miếng Gà Truyền Thống</li>
+                            <li class="list-group-item">1 Popcorn (Lớn)</li>
+                            <li class="list-group-item">3 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 pb-5">
+                    <div class="card border-0 bg-light">
+                        <div class="card-body">
+                            <img src="./imgs/t4.png" class="img-fluid" alt="...">
+                            <h5 class="card-title">Combo Gia Đình</h5>
+                            <p class="card-text">272.000đ</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">5 Miếng Gà Giòn Cay</li>
+                            <li class="list-group-item">3 Burger Tôm</li>
+                            <li class="list-group-item">4 Pepsi Lon</li>
+                        </ul>
+                        <div class="card-body">
+                            <a class="btn-cart btn btn-primary">Đặt Hàng</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section class="contact py-5">
+        <div id="link" class="container py-5">
+            <div class="row">
+                <div class="col-lg-5 m-auto text-center">
+                    <h1>KẾT NỐI VỚI FASTFOOD</h1>
+                </div>
+            </div>
+
+            <div class="row py-5">
+                <div class="col-lg-9 m-auto">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h6>ĐỊA CHỈ</h6>
+                            <p>15 Trần Văn Trà, Tân Phú</p>
+
+                            <h6>SỐ ĐIỆN THOẠI</h6>
+                            <a href="#">012 345 6789</a>
+
+                            <h6>E-MAIL</h6>
+                            <a href="#">fastfood2022@gmail.com</a>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 pb-3 pt-3">
+                                    <input type="text" class="form-control bg-light" placeholder="Họ">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control bg-light" placeholder="Tên">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 py-3">
+                                    <textarea name="" class="form-control bg-light" id=""
+                                        placeholder="Bạn cần gì ở chúng tôi..." cols="10" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <button class="btn1">Gửi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Preferential -->
+    <section class="news py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-9 m-auto text-center">
+                    <h1>Đăng Ký Nhận Thông Tin Ưu Đãi</h1>
+                    <input class="px-3" type="text" placeholder="Nhập Email...">
+                    <button class="btn2">Đăng Ký</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-11">
+                    <div class="row">
+                        <div class="col-lg-3 py-3">
+                            <h5>THỰC ĐƠN</h5>
+                            <h5>NHÀ HÀNG</h5>
+                            <h5>TIN KHUYẾN MÃI</h5>
+                            <h5>ĐẶT TIỆN SINH NHẬT</h5>
+                            <h5>THÀNH VIÊN</h5>
+                        </div>
+
+                        <div class="col-lg-3 py-3">
+                            <h5 class="pb-3">GIỚI THIỆU</h5>
+                            <p>FASTFOOD Việt Nam</p>
+                            <p>Tin Tức</p>
+                        </div>
+
+                        <div class="col-lg-3 py-3">
+                            <h5 class="pb-3">NGHỀ NGHIỆP</h5>
+                            <p>Tuyển Dụng</p>
+                        </div>
+
+                        <div class="col-lg-3 py-3">
+                            <h5 class="pb-3">KẾT NỐI</h5>
+                            <span><i class="fa-brands fa-facebook"></i></span>
+                            <span><i class="fa-brands fa-youtube"></i></span>
+                            <span><i class="fa-brands fa-instagram"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <p class="m-auto text-center">Copyright © 2022 FAST FOOD Vietnam</p>
+        </div>
+    </section>
+    <!-- Roll on top -->
+    <div class="roll">
+        <!-- Back to top button -->
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- modal -->
+
+
+    <!-- link js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js" async></script>
+
+
+</body>
+
+</html>
