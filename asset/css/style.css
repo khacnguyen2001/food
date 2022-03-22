@@ -197,7 +197,6 @@ p:hover {
 }
 
 /* cart */
-/* cart */
 .cart-header {
     font-weight: bold;
     font-size  : 1.25em;
@@ -278,6 +277,7 @@ p:hover {
 
 }
 
+
 .cart-total {
     text-align  : end;
     margin-top  : 10px;
@@ -294,4 +294,8 @@ p:hover {
 .cart-total-price {
     color    : #333;
     font-size: 1.1em;
+}
+
+.close {
+    font-size: 20px;
 }

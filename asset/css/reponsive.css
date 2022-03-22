@@ -3,7 +3,7 @@
 
     /* modal */
     .modal-content {
-        width: 95%;
+        width: 100%;
     }
 
     .cart-item-title {
@@ -47,7 +47,6 @@
         margin-left: 0.3rem;
         padding    : 10px;
     }
-
 
     .cart-item-title {
         font-size: 0.5em;
