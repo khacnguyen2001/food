@@ -5,6 +5,10 @@
 }
 
 /* global */
+.mt-10 {
+    margin-top: 100px;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -76,7 +80,7 @@ p:hover {
     border       : 2px solid #e61038;
 }
 
-.btn {
+.btn5 {
     background: #e61038;
     outline   : none;
     border    : none;
@@ -248,7 +252,7 @@ p:hover {
     border-radius: 10px;
 }
 
-.btn-danger {
+.btn-danger-1 {
     color           : white;
     background-color: #EB5757;
     border          : none;
@@ -304,4 +308,10 @@ p:hover {
 
 .close {
     font-size: 20px;
+}
+
+/* register */
+.form-register {
+    max-width: 40%;
+    padding  : 50px 0;
 }

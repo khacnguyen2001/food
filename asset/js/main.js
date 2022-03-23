@@ -14,8 +14,9 @@ close_footer.onclick = function () {
     modal.style.display = "none";
 }
 order.onclick = function () {
-    alert("Cảm ơn bạn đã thanh toán đơn hàng")
+    window.location = "register.html";
 }
+
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -24,7 +25,7 @@ window.onclick = function (event) {
 
 
 // xóa cart
-var remove_cart = document.getElementsByClassName("btn-danger");
+var remove_cart = document.getElementsByClassName("btn-danger-1");
 for (var i = 0; i < remove_cart.length; i++) {
     var button = remove_cart[i]
     button.addEventListener("click", function () {
@@ -73,14 +74,14 @@ for (var i = 0; i < add_cart.length; i++) {
 
         var button = event.target;
         var product = button.parentElement.parentElement;
-        var img = product.parentElement.getElementsByClassName("img-fluid")[0].src
-        var title = product.getElementsByClassName("card-title")[0].innerText
-        var price = product.getElementsByClassName("card-text")[0].innerText
-        addItemToCart(title, price, img)
-        // Khi thêm sản phẩm vào giỏ hàng thì sẽ hiển thị modal
+        var img = product.parentElement.getElementsByClassName("img-fluid")[0].src;
+        var title = product.getElementsByClassName("card-title")[0].innerText;
+        var price = product.getElementsByClassName("card-text")[0].innerText;
+        addItemToCart(title, price, img);
+        // add product -> show modal
         modal.style.display = "block";
 
-        updatecart()
+        updatecart();
     })
 }
 
@@ -89,7 +90,7 @@ function addItemToCart(title, price, img) {
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cart_title = cartItems.getElementsByClassName('cart-item-title')
-    // Nếu title của sản phẩm bằng với title mà bạn thêm vao giỏ hàng thì sẽ thông cho user.
+    // If the title of the product is equal to the title you add to the cart, it will notify the user.
     for (var i = 0; i < cart_title.length; i++) {
         if (cart_title[i].innerText == title) {
             alert('Sản Phẩm Đã Có Trong Giỏ Hàng')
