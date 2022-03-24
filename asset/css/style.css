@@ -5,8 +5,16 @@
 }
 
 /* global */
+.bg-h3 {
+    background-color: rgb(245, 245, 245);
+}
+
 .mt-10 {
     margin-top: 100px;
+}
+
+.ml-5 {
+    margin-right: 5px;
 }
 
 .align-items-center {

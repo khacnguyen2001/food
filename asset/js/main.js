@@ -17,6 +17,8 @@ order.onclick = function () {
     window.location = "register.html";
 }
 
+
+
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
