@@ -36,6 +36,7 @@ for (var i = 0; i < remove_cart.length; i++) {
     })
 }
 
+
 // update cart 
 function updatecart() {
     var cart_item = document.getElementsByClassName("cart-items")[0];
