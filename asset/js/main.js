@@ -26,7 +26,7 @@ window.onclick = function (event) {
 }
 
 
-// xóa cart
+// delete cart
 var remove_cart = document.getElementsByClassName("btn-danger-1");
 for (var i = 0; i < remove_cart.length; i++) {
     var button = remove_cart[i]
@@ -43,19 +43,19 @@ function updatecart() {
     var cart_rows = cart_item.getElementsByClassName("cart-row");
     var total = 0;
     for (var i = 0; i < cart_rows.length; i++) {
-        var cart_row = cart_rows[i]
-        var price_item = cart_row.getElementsByClassName("cart-price ")[0]
-        var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0]
-        var price = parseFloat(price_item.innerText)// chuyển một chuổi string sang number để tính tổng tiền.
-        var quantity = quantity_item.value // lấy giá trị trong thẻ input
+        var cart_row = cart_rows[i];
+        var price_item = cart_row.getElementsByClassName("cart-price ")[0];
+        var quantity_item = cart_row.getElementsByClassName("cart-quantity-input")[0];
+        var price = parseFloat(price_item.innerText);
+        var quantity = quantity_item.value;
         total = total + (price * quantity)
     }
-    document.getElementsByClassName("cart-total-price")[0].innerText = total + ',000đ'
-    // Thay đổi text = total trong .cart-total-price. Chỉ có một .cart-total-price nên mình sử dụng [0].
+    document.getElementsByClassName("cart-total-price")[0].innerText = total + ',000đ';
+
 }
 
 
-// thay đổi số lượng sản phẩm
+// change product quantity
 var quantity_input = document.getElementsByClassName("cart-quantity-input");
 for (var i = 0; i < quantity_input.length; i++) {
     var input = quantity_input[i];
@@ -69,7 +69,7 @@ for (var i = 0; i < quantity_input.length; i++) {
 }
 
 
-// Thêm vào giỏ
+// Add product in cart
 var add_cart = document.getElementsByClassName("btn-cart");
 for (var i = 0; i < add_cart.length; i++) {
     var add = add_cart[i];
@@ -81,18 +81,16 @@ for (var i = 0; i < add_cart.length; i++) {
         var title = product.getElementsByClassName("card-title")[0].innerText;
         var price = product.getElementsByClassName("card-text")[0].innerText;
         addItemToCart(title, price, img);
-        // add product -> show modal
         modal.style.display = "block";
-
         updatecart();
     })
 }
 
 function addItemToCart(title, price, img) {
-    var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-row')
-    var cartItems = document.getElementsByClassName('cart-items')[0]
-    var cart_title = cartItems.getElementsByClassName('cart-item-title')
+    var cartRow = document.createElement('div');
+    cartRow.classList.add('cart-row');
+    var cartItems = document.getElementsByClassName('cart-items')[0];
+    var cart_title = cartItems.getElementsByClassName('cart-item-title');
     // If the title of the product is equal to the title you add to the cart, it will notify the user.
     for (var i = 0; i < cart_title.length; i++) {
         if (cart_title[i].innerText == title) {
